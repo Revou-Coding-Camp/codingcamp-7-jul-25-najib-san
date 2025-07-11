@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Najib</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do Najib</h1>
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="Tambah Tugas Baruuu..">
+            <input type="date" id="dueDateInput">
+            <button onclick="addtask()">Add</button>
+        </div>
+        <div class="controls">
+            <select name="" id="filterSelect" onchange="filterTask(this.value)">
+                <option value="all">All</option>
+                <option value="Completed">Completed</option>
+                <option value="pending">Pending</option>
+            </select>
+            <button class="delete-all" onclick="deleteAllTasks()">Delete All</button>
+        </div>
+        <table id="taskTable">
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="taskList"></tbody>
+        </table>
+        <div id="editForm" class="edit-form">
+            <input type="text" id="editTaskInput" placeholder="Edit Task...">
+            <input type="date" id="editDueDateInput">
+            <button onclick="saveEdit()">Save</button>
+            <button onclick="cancelEdit()">Cancel</button>
+        </div>
+    </div>
+    <div class="watermark"> M. Ainun Najib</div>
+    <script src="script.js"></script>
+</body>
+</html>

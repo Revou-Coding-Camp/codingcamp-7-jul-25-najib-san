@@ -1,0 +1,166 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Menempatkan container di tengah vertikal */
+  min-height: 100vh; /* Pastikan body mengisi tinggi layar */
+  background-color: #1e2a25;
+  margin: 0;
+  padding: 20px;
+  color: #e0e0e0;
+}
+
+.container {
+  width: 85%;
+  max-width: 850px;
+  background: #2a3d36;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center; /* Memastikan isi dalam container terpusat */
+}
+
+h1 {
+  color: #d4c75a;
+  margin-bottom: 20px;
+}
+
+.input-section {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+input[type="text"], input[type="date"] {
+  padding: 15px; /* Ukuran lebih besar untuk HP */
+  border: none;
+  border-radius: 6px;
+  background-color: #1e2f28;
+  color: #e0e0e0;
+  flex: 1;
+  font-size: 16px; /* Ukuran teks lebih besar untuk readability */
+}
+
+input[type="date"] {
+  width: 150px;
+}
+
+button {
+  padding: 15px 25px; /* Ukuran lebih besar untuk sentuhan HP */
+  border: none;
+  border-radius: 6px;
+  background-color: #6b8e23;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #5a7b1a;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+select {
+  padding: 12px; /* Ukuran lebih besar untuk HP */
+  border: none;
+  border-radius: 6px;
+  background-color: #d4c75a;
+  color: #1e2a25;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+select:hover {
+  background-color: #b7ac47;
+}
+
+.delete-all {
+  padding: 12px 20px;
+  background-color: #d4c75a;
+}
+
+.delete-all:hover {
+  background-color: #b7ac47;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1e2f28;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #2a3d36;
+}
+
+th {
+  background-color: #2a3d36;
+  color: #d4c75a;
+}
+
+td button {
+  padding: 10px 15px; /* Ukuran lebih besar untuk sentuhan */
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.no-tasks {
+  text-align: center;
+  color: #d4c75a;
+  padding: 20px;
+}
+
+.edit-form {
+  display: none;
+  margin-top: 10px;
+}
+
+.edit-form.active {
+  display: block;
+}
+
+.watermark {
+  text-align: center;
+  color: #a3a375;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+/* Media Queries untuk HP */
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+  .input-section {
+    flex-direction: column;
+  }
+  input[type="date"] {
+    width: 100%;
+  }
+  .controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+  table {
+    font-size: 14px;
+  }
+  th, td {
+    padding: 8px;
+  }
+  .edit-form {
+    padding: 10px;
+  }
+  .edit-form input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
