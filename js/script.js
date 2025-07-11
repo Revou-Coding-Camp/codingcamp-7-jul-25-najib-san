@@ -85,7 +85,7 @@ function displayTasks(filter) {
   }
 
   if (filteredTasks.length === 0) {
-    taskList.innerHTML = '<tr><td colspan="4" class="no-tasks">No Task Found</td></tr>';
+    taskList.innerHTML = '<tr><td colspan="4" class="no-tasks">No tasks found</td></tr>';
     return;
   }
 
@@ -97,8 +97,8 @@ function displayTasks(filter) {
       <td>${task.status === 'pending' ? 'Pending' : 'Completed'}</td>
       <td>
         <button onclick="editTask(${task.id})">Edit</button>
-        <button onclick="toggleStatus(${task.id})">Completed</button>
-        <button onclick="deleteTask(${task.id})">Delect</button>
+        <button onclick="toggleStatus(${task.id})">Complete</button>
+        <button onclick="deleteTask(${task.id})">Delete</button>
       </td>
     `;
     taskList.appendChild(row);
